@@ -65,9 +65,10 @@
     height:100%;
     position:fixed;
     top:85px;
-    left:0;
     overflow-x:hidden;
     z-index:1;
+    padding:0 15px;
+
 }
 
 #companyName{
