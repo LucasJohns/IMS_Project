@@ -59,16 +59,15 @@
 
 }
 
-#ims_sidebar{
-    background-color:#eaeaea;
-    width: 275px;
-    height:100%;
-    position:fixed;
-    top:85px;
-    overflow-x:hidden;
-    z-index:1;
-    padding:0 15px;
-
+#ims_sidebar {
+    background-color: #eaeaea;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 85px;
+    overflow-x: hidden;
+    z-index: 1;
+    padding: 0 15px;
 }
 
 #companyName{
@@ -78,4 +77,70 @@
     text-align:center;
     line-height:35px;
     font-size:16px;
+}
+
+
+/*Sidebar that lists companies*/
+#county-selectbox{
+    text-align:center;
+    width:95%;
+    height:35px;
+    margin:0;
+    padding:0;
+    margin-bottom:5px;
+    margin-left:2.5%;
+}
+#countySelectionContainer {
+    margin: 0 2.5%;
+    padding: 0;
+    border-bottom: 2px solid #cccccc;
+}
+#companySidebarContainer {
+    margin-top: 25px;
+}
+#companySidebarSubContainer{
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    margin-left:25px;
+}
+#spacer {
+    margin-bottom: 100px;
+}
+.companyContainer {
+    margin-top: 12px;
+    height:100%;
+    width:100%;
+}
+.companyBody{
+    margin-left:10%;
+}
+.companyHeader{
+    margin-left:2.5%;
+}
+.item{
+    display:block;
+    width:75px;
+    height:35px;
+    background-color:black;
+    color:white;
+    margin-top:5px;
+    border-radius:10px;
+    text-align:center;
+    line-height:35px;
+
+}
+
+#companyTable {
+    width: 80%;
+    position: absolute;
+    top: 45px;
+    left:11.25%;
+}
+
+#companyTable td{
+    height:60px;
+    width: 80px;
+    border:1px solid black;
 }
