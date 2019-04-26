@@ -1,14 +1,4 @@
-﻿body {
-    margin-top:50px;
-}
-
-.margin-left-remove{
-    margin-left:0 !important;
-}
-
-.padding-left-remove {
-    padding-left: 0 !important;
-}
+﻿
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
@@ -17,21 +7,6 @@
     padding-right: 15px;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-}
-
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
-}
-
-/* QR code generator */
-#qrCode {
-    margin: 15px;
-}
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
@@ -41,10 +16,42 @@
     }
 }
 
-body{
-    width:100%;
-    overflow-x:hidden;
+
+
+
+
+
+
+
+
+
+html{
+    min-height:100%;
+    overflow:auto;
 }
+body {
+    margin-top: 50px;
+    min-height: 100%;
+}
+
+.margin-left-remove {
+    margin-left: 0 !important;
+}
+
+.padding-left-remove {
+    padding-left: 0 !important;
+}
+
+#companyName {
+    color: white;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+}
+
+/*Nav bar and Sub Nav Bar*/
 
 .navbar-custom {
     background-color: #C10000 !important;
@@ -68,32 +75,26 @@ body{
     
 }
 
+/*Sidebar that lists companies*/
 #ims_sidebar {
     background-color: #eaeaea;
     width: 250px;
-    height: 90.8vh;
-    display:block;
+    height:100%;
+    position:fixed;
     overflow-x: hidden;
     z-index: 1;
     padding: 0 15px;
-    float:left;
+    overflow-y:scroll;
+    display:inline-block;
+    margin:0;
 }
 
-#ims_sidebar-wrapper{
-    height:100%;
+#ims_sidebar-wrapper {
+    width:250px;
+    margin:0;
+    padding:0;
 }
 
-#companyName {
-    color: white;
-    width: 100%;
-    height: 35px;
-    text-align: center;
-    line-height: 35px;
-    font-size: 16px;
-}
-
-
-/*Sidebar that lists companies*/
 #county-selectbox{
     text-align:center;
     width:95%;
@@ -119,7 +120,7 @@ body{
     margin-left:25px;
 }
 #spacer {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 .companyContainer {
     margin-top: 12px;
@@ -139,15 +140,47 @@ body{
     display:block;
     width:75px;
     height:35px;
-    background-color:black;
+    font-family:Arial;
+    background-color:#C10000;
     color:white;
     margin-top:5px;
-    border-radius:10px;
     text-align:center;
     line-height:35px;
 
 }
+.item text{
+    font-weight:bold;
+}
 
 /*Main company assignment table*/
 
+#companyTableContainer{
+    margin-top:35px;
+    padding:0;
+    display:inline-block;
+    vertical-align:top;
+    margin-left:375px;
+}
 
+#companyTable {
+    height: 400px;
+    width: 800px;
+    margin:0;
+    padding:0;
+}
+
+#companyTable tr td{
+    border:1px solid;
+    min-width:200px;
+    height:75px;
+}
+
+#companyTable tr th{
+    height:25px;
+    background-color:#303030;
+    color:white;
+    text-align:center;
+    font-family: Arial;
+    border:1px solid #303030;
+    padding:5px;
+}
