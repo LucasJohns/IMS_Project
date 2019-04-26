@@ -17,8 +17,8 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
-        <div class="container margin-left-remove">
+    <nav class="navbar navbar-custom">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -40,11 +40,8 @@
     <nav class="subnavbar">
         <p id="companyName">Browndale Fire Co. No. 1</p>
     </nav>
-    <div class="container body-content margin-left-remove padding-left-remove">
+    <div class="container-fluid">
         @RenderBody()
-        <footer>
-            <p>&copy; 2018 - Incident Management System</p>
-        </footer>
     </div>
 
     <environment include="Development">
