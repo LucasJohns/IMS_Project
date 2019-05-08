@@ -54,10 +54,11 @@ body {
 /*Nav bar and Sub Nav Bar*/
 
 .navbar-custom {
+    z-index:1;
     background-color: #C10000 !important;
     font-size:18px;
     border-bottom:none !important;
-    position:absolute;
+    position:fixed;
     width:100%;
     top:0;
     border:0;
@@ -68,25 +69,26 @@ body {
     color:white !important;
 }
 
-.subnavbar{
-    background-color:#303030;
-    width:100%;
-    height:35px;
-    
+.subnavbar {
+    position: fixed;
+    background-color: #303030;
+    width: 100%;
+    height: 35px;
+    z-index: 1;
 }
 
 /*Sidebar that lists companies*/
 #ims_sidebar {
     background-color: #eaeaea;
-    width: 250px;
     height:100%;
-    position:fixed;
     overflow-x: hidden;
     z-index: 1;
+    display:inline-block;
     padding: 0 15px;
     overflow-y:scroll;
-    display:inline-block;
     margin:0;
+    margin-top:35px;
+    position:fixed;
 }
 
 #ims_sidebar-wrapper {
@@ -155,28 +157,24 @@ body {
 /*Main company assignment table*/
 
 #companyTableContainer{
-    margin-top:35px;
-    padding:0;
-    display:inline-block;
-    vertical-align:top;
-    margin-left:375px;
+    
 }
 
 #companyTable {
-    height: 400px;
-    width: 800px;
-    margin:0;
+    margin:75px 0 0 0;
     padding:0;
+    
+    
 }
 
 #companyTable tr td{
     border:1px solid;
-    min-width:200px;
-    height:75px;
+    height:45px;
 }
 
 #companyTable tr th{
     height:25px;
+    width: 150px;
     background-color:#303030;
     color:white;
     text-align:center;
