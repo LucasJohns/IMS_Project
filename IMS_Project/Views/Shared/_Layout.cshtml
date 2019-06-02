@@ -18,24 +18,27 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-custom">
+    <!--Nav bar-->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-main-custom">
         <div class="container-fluid">
-            <div class="navbar-header">
-
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand navbar-text-white">Incident Management System</a>
+            <ul id="mainNav">
+                <li id="brandText">Incident Management System</li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar-sub-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p id="companyNameSubNav">Browndale Fire Company No. 1</p>
+                </div>
+                <div class="col-xs-6 padding-right-remove">
+                    <a id="addACompany" onclick="alert('LET GET SOME');">+ New Company</a>
+                </div>
             </div>
         </div>
     </nav>
-    <nav class="subnavbar">
-        <div id="leftNavBar">
-            <p id="companyName">Browndale Fire Co. No. 1</p>
-        </div>
-        <div id="rightNavBar">
-            <div id="addNewCompanyWrapper">
-                <a onclick="alert('LET GET SOME');">+ New Company</a>
-            </div>
-        </div>
-    </nav>
+    <!--Body-->
     <div class="container-fluid">
         @RenderBody()
     </div>

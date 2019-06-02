@@ -1,117 +1,56 @@
-﻿@{
-    ViewData["Title"] = "IMS";
+﻿@{ 
+    ViewData["Title"] = "IMS Home";
 }
 
-
-<script src="~/js/GridDrag.js"></script>
-
 <div class="row">
-    <div class="col-xs-5 padding-left-remove">
-        <div id="ims_sidebar-wrapper">
-            <div id="ims_sidebar">
-                <div class="row">
-                    <div class="col">
-                        <div id="countySelectionContainer">
-                            <h6><u><b>Select a county:</b></u></h6>
-                            <select id="county-selectbox" name="countySelection">
-                                <option value="wayne">Wayne</option>
-                                <option value="suquehanna">Susquehanna</option>
-                                <option value="lackawanna">Lackawanna</option>
-                                <option value="pike">Pike</option>
-                            </select>
+    <div class="col-xs-2 padding-left-remove padding-right-remove custom_sidebar_color">
+        <div id="ims-sidebar-wrapper">
+            <div id="ims-sidebar">
+                <div id="countySelectionContainer">
+                    <h6><u><b>Select a county:</b></u></h6>
+                    <select id="county-selectbox" name="countySelection">
+                        <option value="wayne">Wayne</option>
+                        <option value="suquehanna">Susquehanna</option>
+                        <option value="lackawanna">Lackawanna</option>
+                        <option value="pike">Pike</option>
+                    </select>
+                </div>
+                <!-- Start of new company template-->
+                <div class="companyContainer">
+                    <h5 class="companyHeader"><b>Browndale Fire Co. No. 1</b></h5>
+                    <div class="companyBody">
+                        <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
+                            43 ENG
                         </div>
+                        <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
+                            43 LDR
+                        </div>
+                        <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
+                            43 CAR
+                        </div>
+                        <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
+                            43 UTL
+                        </div>
+                    </div>
+                </div>
+                <!-- end of new company template-->
 
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div id="companySidebarContainer">
-                            <div class="companyContainer">
-                                <h5 class="companyHeader"><b>Browndale Fire Co. No. 1</b></h5>
-                                <div class="companyBody">
-                                    <div draggable="true" id="companyID"  class="item" ondragstart="drag_start(event)">
-                                        43 ENG
-                                    </div>
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        43 LDR
-                                    </div>
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        43 CAR
-                                    </div>
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        43 UTL
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="companyContainer">
-                                <h5 class="companyHeader"><b>Browndale Fire Co. No. 1</b></h5>
-                                <div class="companyBody">
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        75 ENG
-                                    </div>
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        75 LDR
-                                    </div>
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        75 CAR
-                                    </div>
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        75 UTL
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="companyContainer">
-                                <h5 class="companyHeader"><b>Browndale Fire Co. No. 1</b></h5>
-                                <div class="companyBody">
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        18 ENG
-                                    </div>
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        18 LDR
-                                    </div>
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        18 CAR
-                                    </div>
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        18 UTL
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="companyContainer">
-                                <h5 class="companyHeader"><b>Browndale Fire Co. No. 1</b></h5>
-                                <div class="companyBody">
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        12 ENG
-                                    </div>
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        12 LDR
-                                    </div>
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        12 CAR
-                                    </div>
-                                    <div draggable="true" id="companyID" class="item" ondragstart="drag_start(event)">
-                                        12 UTL
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="spacer"></div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
-    <div class="col-xs-7 col-xs-offset-2">
+    <div class="col-xs-10 padding-left-remove padding-right-remove">
         <div id="companyTableContainer">
-            <table id="companyTable" >
+            <table id="companyTable">
                 <tr>
                     <th>Ventillation</th>
                     <th>Interior/Fire Attack</th>
                     <th>Exterior Fire Attack</th>
-                    <th>Search/Rescue</th>
+                    <th>Search And Rescue</th>
                     <th>Exposure Protection</th>
                     <th>R.I.T</th>
                     <th>Rehab</th>
+                    <th>Staging</th>
                 </tr>
                 <tr>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
@@ -121,8 +60,10 @@
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                 </tr>
                 <tr>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
@@ -139,14 +80,6 @@
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"><text style="display:none;" id="oof"></text></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
-                </tr>
-                <tr>
-                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
-                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
-                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
-                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
-                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
-                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                 </tr>
                 <tr>
@@ -157,6 +90,17 @@
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
+                </tr>
+                <tr>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                 </tr>
                 <tr>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
@@ -166,8 +110,10 @@
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                 </tr>
                 <tr>
+                    <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
                     <td ondragenter="drag_enter(event)" ondragover="return false" ondrop="drag_drop(event)"></td>
@@ -178,9 +124,6 @@
                 </tr>
             </table>
         </div>
-    </div>
-    <div class="col-xs-1 col-xs-offset-2">
-        
-
-    </div>
 </div>
+
+ <script src="~/js/GridDrag.js"></script>

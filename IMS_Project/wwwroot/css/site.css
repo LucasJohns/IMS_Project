@@ -1,227 +1,174 @@
 ﻿
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+/* column hack */
 
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
-}
-
-
-
-
-
-
-
-
+/*------------------*/
 
 
 html{
-    min-height:100%;
+    font-family:Arial;
 }
+
 body {
-    margin-top: 50px;
-    min-height: 100%;
-}
-.margin-left-remove {
-    margin-left: 0 !important;
+    padding-top: 85px;
 }
 
-.padding-left-remove {
-    padding-left: 0 !important;
+.padding-left-remove{
+    padding-left:0px !important;
 }
 
-#companyName {
-    color: white;
-    width: 100%;
-    height: 35px;
-    text-align: center;
-    line-height: 35px;
-    font-size: 16px;
+.padding-right-remove {
+    padding-right: 0px !important;
 }
 
-/*Nav bar and Sub Nav Bar*/
-
-.navbar-custom {
-    z-index:1;
+/*Main Nav Bar*/
+.navbar-main-custom {
     background-color: #C10000 !important;
-    font-size:18px;
-    border-bottom:none !important;
-    position:fixed;
-    width:100%;
-    top:0;
-    border:0;
-    border-radius:0;
+    font-size: 18px;
+    border-bottom: none !important;
+    height: 50px !important;
+    margin: 0;
+    border-radius: 0;
 }
 
-.navbar-text-white{
-    color:white !important;
+#brandText {
+    color: white;
+    line-height:50px;
+    margin:0;
 }
 
-.subnavbar {
-    position: fixed;
+#mainNav{
+    list-style-type:none;
+    color:white;
+    padding:0;
+    margin:0;
+}
+
+/* Sub Nav Bar*/
+
+.navbar-sub-custom {
     background-color: #303030;
-    width: 100%;
-    height: 35px;
-    z-index: 1;
-}
-#rightNavBar,#leftNavBar{
-    display:inline-block;
-    height:35px;
-    width:100%;
-    margin:0;
-    padding:0;
-}
-
-#rightNavBar{
-    width:25%;
-    line-height:36px;
-    position:fixed;
-    right:0;
-    top:50px;
-}
-#addNewCompanyWrapper{
-    width:100%;
-    height:35px;
+    height: 35px !important;
+    min-width: 100%;
+    border-radius: 0;
+    color:white;
     line-height:35px;
+    margin:50px 0 0 0;
 }
-#addNewCompanyWrapper a {
+
+#addACompany {
     text-decoration: none;
-    color:#ccc;
-    font-size:16px;
-    width:150px;
-    display:block;
-    text-align:center;
-    float:right;
-}
-
-#addNewCompanyWrapper a:hover{
-    background-color:#606060;
-    cursor:pointer;
-}
-/*Sidebar that lists companies*/
-#ims_sidebar {
-    min-width: 250px;
-    background-color: #eaeaea;
-    overflow-x: hidden;
-    z-index: 1;
-    display: inline-block;
-    padding: 0 15px;
-    overflow-y: scroll;
-    margin: 0;
-    margin-top: 35px;
-    position: fixed;
-    max-height: 100%;
-    min-height:100%;
-}
-
-#ims_sidebar-wrapper {
-    min-width: 250px;
-    max-height:100%;
-    margin: 0;
-    padding: 0;
-}
-
-#county-selectbox{
-    text-align:center;
-    width:95%;
-    height:35px;
-    margin:0;
-    padding:0;
-    margin-bottom:5px;
-    margin-left:2.5%;
-}
-#countySelectionContainer {
-    margin: 0 2.5%;
-    padding: 0;
-    border-bottom: 2px solid #cccccc;
-}
-#companySidebarContainer {
-    margin-top: 25px;
-}
-#companySidebarSubContainer{
-    width:100%;
-    height:100%;
-    margin:0;
-    padding:0;
-    margin-left:25px;
-}
-#spacer {
-    margin-bottom: 100px;
-}
-.companyContainer {
-    margin-top: 12px;
-    height:100%;
-    width:100%;
-    font-size:16px;
-    font-family:Calibri;
-    min-height:100px;
-}
-.companyBody {
-    margin-left: -50%;
-    font-weight:lighter;
-}
-.companyHeader {
-    width: 200px;
-    margin-left: 10px;
-    border-bottom: 1px solid black;
+    color: #ccc;
     font-size: 16px;
-    font-family: Calibri;
+    float: right;
+    margin: 0;
+    padding:0 10px;
 }
+
+#companyNameSubNav {
+    font-style: italic;
+    text-decoration: underline;
+    margin: 0;
+}
+
+#addACompany:hover {
+    background-color: #606060;
+    cursor: pointer;
+}
+
+/* Company Sidebar*/
+
+.custom_sidebar_color {
+    background-color: #eaeaea;
+}
+
+#ims-sidebar-wrapper {
+    margin: 0;
+    height: calc(100vh - 85px);
+    background-color: #eaeaea;
+    min-width: 100%;
+    overflow-y: scroll;
+
+}
+
+#ims-sidebar {
+    width: 100%;
+}
+
+
+#countySelectionContainer {
+    margin-bottom:15px;
+    padding-bottom: 5px;
+    border-bottom:1px solid #ccc;
+    padding:0 10px 5px 10px;
+}
+
+#countySelectionContainer select{
+    min-width:100%;
+}
+
+/*Dynamic Company's*/
+.companyContainer {
+    padding-left: 10px;
+}
+
+
+.companyBody{
+    width:40px;
+    padding-left:10px;
+}
+
+.companyHeader{
+    text-decoration:underline;
+}
+
 .item {
-    display: block;
     width: 75px;
     height: 35px;
-    font-family: 'Arial Rounded MT';
-    font-size: 16px;
     background-color: #C10000;
     color: white;
-    margin-top: 5px;
+    cursor: move;
     text-align: center;
-    margin-left:auto;
-    margin-right:auto;
     line-height: 35px;
-    cursor:move;
+    font-weight: bold;
+    margin:auto;
 }
-.item text{
+
+/*Company Table*/
+
+#companyTable{
+
+}
+
+#companyTable{
+    margin:10px 0 0 10px;
+    padding:0 10px 0 0;
+    
+}
+
+#companyTable tr th {
+    background-color: #303030;
+    min-height: 40px;
+    max-width:100px;
+    color: white;
+    text-align: center;
+    padding: 0px 10px;
+    border: 1px solid #303030;
+    width:100px;
+    text-wrap:normal;
     font-weight:100;
 }
-
-/*Main company assignment table*/
-
-#companyTableContainer{
-    margin-left:45px;
+.companyBody div{
+    margin-bottom:5px;
 }
 
-#companyTable {
-    margin:60px 0 0 0;
-    padding:0;
-    
-    
+#companyTable tr td {
+    border: 1px solid #303030;
+    min-height:45px;
+    height:45px;
 }
 
-#companyTable tr td{
-    border:1px solid;
-    height:55px;
-    width:100%;
-}
-
-#companyTable tr th{
-    height:25px;
-    min-width: 125px;
-    background-color:#303030;
-    color:white;
-    text-align:center;
-    font-family: Arial;
-    border:1px solid #303030;
-    padding:5px;
+#companyTable tr{
+    min-height:40px;
 }
