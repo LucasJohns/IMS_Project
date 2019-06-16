@@ -21,14 +21,30 @@
     <!--Nav bar-->
     <nav class="navbar navbar-default navbar-fixed-top navbar-main-custom">
         <div class="container-fluid">
-            <ul id="mainNav">
-                <li id="brandText">Incident Management System</li>
-            </ul>
-        </div>
-    </nav>
-    <nav class="navbar-sub-custom navbar-fixed-top">
-        <div class="container-fluid">
             <div class="row">
+                <div class="col-xs-9 col-lg-10">
+                    <ul id="mainNav">
+                        <li id="brandText">Incident Management System</li>
+                    </ul>
+                </div>
+                <div class="col-xs-3 col-lg-2">
+                    <div id="timerWrapper">
+                        <div id="timer">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-6 padding">
+                                        <div id="timerText">00:00:00</div>
+                                    </div>
+                                    <div class="col-xs-6 padding-right-remove">
+                                        <button class="timerButton" onclick="startTimer()">Start</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row navbar-sub-custom">
                 <div class="col-xs-6">
                     <p id="companyNameSubNav">Browndale Fire Company No. 1</p>
                 </div>
@@ -63,8 +79,10 @@
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
+
     </environment>
 
     @RenderSection("Scripts", required: false)
+
 </body>
 </html>

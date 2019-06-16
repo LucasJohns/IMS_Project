@@ -11,7 +11,7 @@ html{
 }
 
 body {
-    padding-top: 85px;
+    padding-top: 78px;
 }
 
 .padding-left-remove{
@@ -27,14 +27,14 @@ body {
     background-color: #C10000 !important;
     font-size: 18px;
     border-bottom: none !important;
-    height: 50px !important;
     margin: 0;
     border-radius: 0;
+    min-height:71px;
 }
 
 #brandText {
     color: white;
-    line-height:50px;
+    line-height:200%;
     margin:0;
 }
 
@@ -49,12 +49,10 @@ body {
 
 .navbar-sub-custom {
     background-color: #303030;
-    height: 35px !important;
     min-width: 100%;
     border-radius: 0;
     color:white;
     line-height:35px;
-    margin:50px 0 0 0;
 }
 
 #addACompany {
@@ -70,6 +68,7 @@ body {
     font-style: italic;
     text-decoration: underline;
     margin: 0;
+    font-size:14px;
 }
 
 #addACompany:hover {
@@ -171,4 +170,44 @@ body {
 
 #companyTable tr{
     min-height:40px;
+}
+
+/*Timer*/
+
+#timerWrapper, #timer, #timerText {
+    color: white;
+}
+
+#timerWrapper{
+    padding:8px 0;
+    max-width:200px;
+}
+
+#timer {
+    background-color: #303030;
+    padding: 0;
+}
+
+#timerText{
+    padding:2px 0 0 0;
+    margin:0 10px 0 0 !important;
+    display:inline-block;
+}
+
+.timerButton{
+    background-color:white;
+    border:none;
+    display:inline-block;
+    color:black;
+    width:100%;
+    height:100%;
+}
+
+.timerButton:hover {
+    background-color: #4CAF50;
+    border: none;
+    display: inline-block;
+    color: white;
+    width: 100%;
+    height: 100%;
 }
