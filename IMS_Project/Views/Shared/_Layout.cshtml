@@ -18,6 +18,36 @@
     </environment>
 </head>
 <body>
+
+    <div class="container-fluid hidden" id="popupContainer">
+        <div class="row">
+            <div class="popupWrapper">
+                <div class="col-xs-12" style="background-color:#fff;">
+                    <div class="row popupHeader">
+                        <div class="col-xs-12">
+                            Popup Header Text
+                        </div>
+                    </div>
+
+                    <div class="row popupImage">
+                        <div class="col-xs-12">
+                            <img alt="warning" src="~/images/warning.png" width="32" />
+                        </div>
+                    </div>
+                    <div class="row popupBody">
+                        <div class="col-xs-12 ">
+                            <p>This is a body, the quick brown fox jumps over a lazy dog. Put it wherever you want.</p>
+                        </div>
+                    </div>
+                    <div class="row popupButtonContainer">
+                        <div class="col-xs-12">
+                            <button type="button" onclick="confirmParCheck()" class="popupButton button">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Nav bar-->
     <nav class="navbar navbar-default navbar-fixed-top navbar-main-custom">
         <div class="container-fluid">
@@ -49,7 +79,7 @@
                     <p id="companyNameSubNav">Browndale Fire Company No. 1</p>
                 </div>
                 <div class="col-xs-6 padding-right-remove">
-                    <a id="addACompany" onclick="alert('LET GET SOME');">+ New Company</a>
+                    <a id="addACompany" onclick="showPARCheck()">+ New Company</a>
                 </div>
             </div>
         </div>
@@ -59,6 +89,8 @@
         @RenderBody()
     </div>
 
+
+    <script src="~/js/timer.js"></script>
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
@@ -83,6 +115,7 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
+
 
 </body>
 </html>

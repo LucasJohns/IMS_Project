@@ -8,6 +8,8 @@
 
 html{
     font-family:Arial;
+    height:100%;
+    overflow:hidden;
 }
 
 body {
@@ -114,7 +116,7 @@ body {
 
 
 .companyBody{
-    width:40px;
+    width:100%;
     padding-left:10px;
 }
 
@@ -131,7 +133,6 @@ body {
     text-align: center;
     line-height: 35px;
     font-weight: bold;
-    margin:auto;
 }
 
 /*Company Table*/
@@ -210,4 +211,90 @@ body {
     color: white;
     width: 100%;
     height: 100%;
+}
+
+/*popup*/
+
+.popupWrapper{
+    background-color:#fff;
+    max-width:400px;
+    max-height:100px;
+    margin:auto;
+    display:block;
+}
+
+#popupContainer{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:12345;
+    background-color:rgba(0,0,0,.5);
+}
+
+.popupHeader {
+    background-color: #303030;
+    color:#fff;
+    padding:10px 0;
+    font-weight:bold;
+    text-align:center;
+}
+.popupBody{
+    background-color:#fff;
+    padding:10px 20px;
+}
+
+.popupImage img {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 32px;
+    padding:10px 0 0 0;
+}
+
+.popupButtonContainer{
+    border-top:1px solid #c4c4c4;
+    padding:10px 0;
+    margin:0 20px 0;
+}
+
+.popupButtonContainer button {
+    margin: 0 auto;
+}
+
+/*button*/
+
+.button,
+.button:focus,
+.button:visited,
+.button:link,
+.button:hover,
+.button:active {
+    text-align: center;
+    display: block;
+    background-color: #303030;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    font-size: 16px;
+    max-width: 100px;
+    border: 2px solid #303030;
+}
+
+
+.button:hover {
+    background-color: #fff;
+    border:2px solid #303030;
+    color: #303030;
+    font-weight:600;
+}
+
+.hidden{
+    display:none;
 }

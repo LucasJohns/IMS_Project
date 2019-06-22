@@ -16,11 +16,17 @@ function drag_start(event) {
 //Detects if the item being dragged has been dropped into a grid cell
 function drag_drop(event) {
     event.preventDefault();
-    if (event.target.innerHTML === '') {
+    if (event.target.className === 'companyBody') {
         var draggedElement = event.dataTransfer.getData('src');
         event.target.appendChild(retrieveElementId(draggedElement));
+        retrieveElementId(draggedElement).style = "";
+    }
+    if (event.target.innerHTML === '') {
+        draggedElement = event.dataTransfer.getData('src');
+        event.target.appendChild(retrieveElementId(draggedElement));
         retrieveElementId('oof').innerHTML = retrieveElementId(draggedElement);
-    } else {
+        retrieveElementId(draggedElement).style = "margin:0 auto;";
+    } else {       
         var src = retrieveElementId(event.dataTransfer.getData('src'));
         var draggedElementParent = src.parentNode;
         var targetElement = event.currentTarget.firstElementChild;
@@ -29,16 +35,20 @@ function drag_drop(event) {
         draggedElementParent.appendChild(targetElement);
         retrieveElementId('oof').innerHTML = targetElement;
     }
-    
 }
 
 function hasNumber(myString) {
     return /\d/.test(myString);
 }
 
+function drag_leave(event) {
+}
 function drag_enter(event) {
-
     retrieveElementId('oof').innerHTML = "you";
+}
+
+function drag_over(event) {
+    
 }
 
 function retrieveElementId(id) {

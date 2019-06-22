@@ -8,6 +8,7 @@ var tInterval;
 var savedTime;
 var paused = 0;
 var running = 0;
+var benchmark = 0;
 function startTimer(){
   if(!running){
     startTime = new Date().getTime();
@@ -25,15 +26,10 @@ function pauseTimer(){
   } else if (!paused) {
     clearInterval(tInterval);
     savedTime = difference;
+    startTimerButton.innerHTML = "Paused";
+    startTimerButton.style.padding = "initial 20px";
     paused = 1;
     running = 0;
-    timerDisplay.style.background = "#A90000";
-    timerDisplay.style.color = "#690000";
-    timerDisplay.style.cursor = "pointer";
-    startTimerButton.classList.remove('lighter');
-    pauseTimerButton.classList.add('lighter');
-    startTimerButton.style.cursor = "pointer";
-    pauseTimerButton.style.cursor = "auto";
   } else {
 // if the timer was already paused, when they click pause again, start the timer again
 startTimer();
@@ -66,4 +62,57 @@ hours = (hours < 10) ? "0" + hours : hours;
   seconds = (seconds < 10) ? "0" + seconds : seconds;
   milliseconds = (milliseconds < 100) ? (milliseconds < 10) ? "00" + milliseconds : "0" + milliseconds : milliseconds;
   timerDisplay.innerHTML = hours + ':' + minutes + ':' + seconds;
+  switch (minutes){
+      case '10':
+          if (benchmark < 1) {
+              pauseTimer();
+              showPARCheck();
+              benchmark += 1;
+          }
+          break;
+      case '20':
+          if (benchmark < 2) {
+              pauseTimer();
+              showPARCheck();
+              benchmark += 1;
+          }
+          break;
+      case '30':
+          if (benchmark < 3) {
+              pauseTimer();
+              showPARCheck();
+              benchmark += 1;
+          }
+          break;
+      case '40':
+          if (benchmark < 4) {
+              pauseTimer();
+              showPARCheck();
+              benchmark += 1;
+          }
+          break;
+      case '50':
+          if (benchmark < 4) {
+              pauseTimer();
+              showPARCheck();
+              benchmark += 1;
+          }
+          break;
+      case '59':
+          if (benchmark < 4) {
+              pauseTimer();
+              showPARCheck();
+              benchmark += 1;
+          }
+          break;
+    }
+}
+
+function showPARCheck() {
+    document.getElementById("popupContainer").classList.remove("hidden");
+}
+
+function confirmParCheck() {
+    document.getElementById("popupContainer").classList.add("hidden");
+    startTimer();
 }
