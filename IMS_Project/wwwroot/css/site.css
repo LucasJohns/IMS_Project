@@ -284,7 +284,9 @@ body {
     padding: 5px 20px;
     font-size: 16px;
     max-width: 100px;
+    font-weight: 0;
     border: 2px solid #303030;
+    font-weight: 600;
 }
 
 

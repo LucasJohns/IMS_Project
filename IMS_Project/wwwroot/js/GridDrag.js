@@ -26,14 +26,17 @@ function drag_drop(event) {
         event.target.appendChild(retrieveElementId(draggedElement));
         retrieveElementId('oof').innerHTML = retrieveElementId(draggedElement);
         retrieveElementId(draggedElement).style = "margin:0 auto;";
-    } else {       
-        var src = retrieveElementId(event.dataTransfer.getData('src'));
-        var draggedElementParent = src.parentNode;
-        var targetElement = event.currentTarget.firstElementChild;
+    } else {
+        if (event.target.parentNode.className.toString() !== "companyBody" || event.target.className.toString() !== "companyBody") {
+            console.log( event.target.parentNode.className !== 'companyBody',event.target.className !== 'companyBody', event.target.parentNode.className, event.target.className);
+            var src = retrieveElementId(event.dataTransfer.getData('src'));
+            var draggedElementParent = src.parentNode;
+            var targetElement = event.currentTarget.firstElementChild;
 
-        event.currentTarget.replaceChild(src, targetElement);
-        draggedElementParent.appendChild(targetElement);
-        retrieveElementId('oof').innerHTML = targetElement;
+            event.currentTarget.replaceChild(src, targetElement);
+            draggedElementParent.appendChild(targetElement);
+            retrieveElementId('oof').innerHTML = targetElement;
+        }
     }
 }
 
